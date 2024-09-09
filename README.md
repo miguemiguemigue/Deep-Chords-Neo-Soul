@@ -92,13 +92,3 @@ model = Sequential([
     Dense(n_vocab, activation='softmax')
 ])
 ```
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-```
-
----
-
-This `README.md` provides a complete overview of the project, instructions on how to install dependencies, train the model, and generate chord progressions using the trained model. Additionally, it includes a brief explanation of the project structure and the model architecture.
