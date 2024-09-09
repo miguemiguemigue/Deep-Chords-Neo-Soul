@@ -105,11 +105,11 @@ While the model works and generates musically correct progressions, there are se
 
 1. **Dataset Size**: The current dataset is small, and training on a larger, more diverse dataset would likely improve the results.
 2. **MIDI Preprocessing**: The preprocessing step could be refined to focus on grouping notes into coherent chords rather than including many individual notes. This would help the model learn more accurate harmonic relationships.
-3. **Additional Layers**: Adding more layers or experimenting with different architectures could enhance the model's ability to generate complex chord progressions.
+3. **Test other architectures**: I'm thinking on transformers where the encoder receive melody and decoder generate chords. Some kind of harmonizer would be interesting.
 
 ## Future Improvements
 
-1. **Increase Dataset Variety**: Expanding the dataset with a wider range of chords, genres, and styles would help the model generalize better and produce more creative results.
+1. **Increase Dataset Variety**: Expanding the dataset with a wider range of chords would help the model generalize better and produce more creative results.
 2. **Note-by-Note Sampling**: Modify the inference process to sample notes one by one, instead of requiring a full input sequence. This would use only the LSTM and Dense layers of the model, leveraging the Functional API.
 3. **Add Temperature to Sampling**: Incorporate a "temperature" parameter into the sampling process to introduce controlled randomness, which would provide more variety in the generated notes and chord progressions.
 4. **Adapting the Model for Melodic Input**: Adjust the model architecture to generate chords based on an input melody, allowing for chord accompaniments that fit a given melody line.
