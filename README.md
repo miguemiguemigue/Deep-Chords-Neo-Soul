@@ -4,6 +4,10 @@ This project implements an LSTM-based neural network that learns neo-soul chord 
 
 ⚠️ **Note**: This is a test project, and the dataset used is really small. While the model generates musically correct chord progressions, there are several improvements that could be made, particularly in the preprocessing of MIDI files. One key improvement would be to avoid the inclusion of too many individual notes, which can interfere with the generation of coherent chord structures.
 
+## Audio Sample
+
+[Sample 1](https://github.com/miguemiguemigue/Deep-Chords-Neo-Soul/raw/main/data/sample.wav)
+
 ## Project Structure
 
 - **`train_model.py`**: Script for training the LSTM model on neo-soul MIDI files.
