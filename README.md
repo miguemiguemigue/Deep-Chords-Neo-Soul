@@ -2,6 +2,8 @@
 
 This project implements an LSTM-based neural network that learns neo-soul chord progressions from MIDI files and generates new chord progressions. The model is trained on MIDI files and is capable of producing MIDI outputs with predicted chord sequences.
 
+⚠️ **Note**: This is a test project, and the dataset used is really small. While the model generates musically correct chord progressions, there are several improvements that could be made, particularly in the preprocessing of MIDI files. One key improvement would be to avoid the inclusion of too many individual notes, which can interfere with the generation of coherent chord structures.
+
 ## Project Structure
 
 - **`train_model.py`**: Script for training the LSTM model on neo-soul MIDI files.
@@ -92,3 +94,18 @@ model = Sequential([
     Dense(n_vocab, activation='softmax')
 ])
 ```
+
+## Potential Improvements
+
+While the model works and generates musically correct progressions, there are several areas for improvement:
+
+1. **Dataset Size**: The current dataset is small, and training on a larger, more diverse dataset would likely improve the results.
+2. **MIDI Preprocessing**: The preprocessing step could be refined to focus on grouping notes into coherent chords rather than including many individual notes. This would help the model learn more accurate harmonic relationships.
+3. **Additional Layers**: Adding more layers or experimenting with different architectures could enhance the model's ability to generate complex chord progressions.
+
+## Future Improvements
+
+1. **Increase Dataset Variety**: Expanding the dataset with a wider range of chords, genres, and styles would help the model generalize better and produce more creative results.
+2. **Note-by-Note Sampling**: Modify the inference process to sample notes one by one, instead of requiring a full input sequence. This would use only the LSTM and Dense layers of the model, leveraging the Functional API.
+3. **Add Temperature to Sampling**: Incorporate a "temperature" parameter into the sampling process to introduce controlled randomness, which would provide more variety in the generated notes and chord progressions.
+4. **Adapting the Model for Melodic Input**: Adjust the model architecture to generate chords based on an input melody, allowing for chord accompaniments that fit a given melody line.
