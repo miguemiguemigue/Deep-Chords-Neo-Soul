@@ -9,7 +9,7 @@ import os
 # Create dataset Tx and Ty from corpus with a given sequence length
 
 
-folder_path = "data/neosoul_chords/"
+folder_path = "data/processed/neosoul_chords/"
 
 def load_midi_files():
     midi_parsed_files = []
